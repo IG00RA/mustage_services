@@ -2,7 +2,6 @@ import { menuItems, socialItems } from '@/data/data';
 import styles from './MobMenu.module.css';
 import Icon from '@/helpers/Icon';
 import Link from 'next/link';
-import Button from '../Button/Button';
 
 type MobMenuProps = {
   isMenuOpen: boolean;
@@ -44,9 +43,7 @@ export default function MobMenu({ isMenuOpen, closeMenu }: MobMenuProps) {
           ))}
         </ul>
 
-        <div className={styles.button_wrap}>
-          <Button> text</Button>
-        </div>
+        <div className={styles.button_wrap}></div>
       </div>
     </div>
   );

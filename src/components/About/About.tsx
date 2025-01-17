@@ -1,5 +1,4 @@
 import styles from './About.module.css';
-import Button from '../Button/Button';
 // import { aboutItems } from '@/data/data';
 import Icon from '@/helpers/Icon';
 
@@ -20,7 +19,6 @@ export default function About() {
             </li>
           ))}
         </ul> */}
-        <Button>Objedna</Button>
       </div>
     </section>
   );

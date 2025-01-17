@@ -1,6 +1,5 @@
 import styles from './Reasons.module.css';
 import Image from 'next/image';
-import Button from '../Button/Button';
 import { reasonsItems } from '@/data/data';
 export default function Reasons() {
   return (
@@ -25,8 +24,6 @@ export default function Reasons() {
             </li>
           ))}
         </ul>
-
-        <Button>Objedna</Button>
       </div>
     </section>
   );

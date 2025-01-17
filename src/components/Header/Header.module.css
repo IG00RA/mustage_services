@@ -4,9 +4,8 @@
   left: 50%;
   transform: translateX(-50%);
   width: var(--container);
-  background-color: var(--foreground);
   border-radius: 0 0 32px 32px;
-  padding: 16px;
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,18 +30,6 @@
 
   @media (min-width: 1408px) {
     border-radius: 0 0 80px 80px;
-  }
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-  @media (min-width: 1408px) {
-    width: var(--desktop);
-    margin: 0 auto;
   }
 }
 
@@ -90,18 +77,10 @@
   display: none;
 
   @media (min-width: 920px) {
-    display: flex;
-    gap: 12px;
-
-    & button {
-      display: none;
-    }
+    display: block;
   }
   @media (min-width: 1200px) {
-    gap: 34px;
     & button {
-      display: flex;
-      min-width: auto;
     }
   }
 }
@@ -129,8 +108,11 @@
 }
 
 .logo_text {
-  font-weight: 600;
-  line-height: 19.5px;
+  color: var(--main_text_color);
+  font-size: var(--fs_xsmall);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 
   @media (min-width: 1024px) {
     font-size: var(--fs_large);
@@ -139,16 +121,16 @@
 }
 
 .burger_wrap {
-  width: 56px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 16px;
-  background-color: var(--background);
   position: relative;
   cursor: pointer;
-
+  width: 40px;
+  height: 40px;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--main_color);
   @media (min-width: 920px) {
     display: none;
   }
@@ -158,7 +140,7 @@
   display: block;
   width: 18px;
   height: 2px;
-  background-color: var(--second_color);
+  background-color: var(--main_color);
   border-radius: 1px;
   position: absolute;
   transition: all 0.5s ease-in-out;

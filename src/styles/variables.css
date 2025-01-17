@@ -12,14 +12,16 @@
   --main_text_color: #111a28;
   --second_text_color: #f9f9f9;
 
+  --gradient: linear-gradient(180deg, #3aa0ff 0%, #1a75ff 100%);
+
   --fs_small: 14px;
   --fs_xsmall: 16px;
   --fs_medium: 18px;
   --fs_large: 24px;
   --fs_xlarge: 32px;
   --fs_mxlarge: 36px;
-  --fs_xxlarge: 40px;
-  --fs_xxxlarge: 45px;
+  --fs_xxlarge: 48px;
+  --fs_xxxlarge: 48px;
 
   --mobile: 328px;
   --mobile_l: 360px;
