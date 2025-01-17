@@ -5,7 +5,7 @@ import reas4 from '../img/reasons/academy-mob.webp';
 import reas5 from '../img/reasons/bot-mob.webp';
 
 export const socialItems = [
-  { icon: 'icon-tg', link: 'https://t.me/usaffiliate' },
+  { icon: 'icon-tg-soc', link: 'https://t.me/usaffiliate' },
   { icon: 'icon-youtube', link: 'https://www.youtube.com/@usaffiliate' },
   { icon: 'icon-tik', link: 'https://www.tiktok.com/@mustage.io' },
 ];

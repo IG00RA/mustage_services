@@ -24,26 +24,34 @@ export default function MobMenu({ isMenuOpen, closeMenu }: MobMenuProps) {
           <ul>
             {menuItems.map((item, index) => (
               <li
-                className={styles.mobile_link}
+                className={styles.mobile_item}
                 key={index}
                 onClick={closeMenu}
               >
-                <Link href={item.href}>{item.label}</Link>
+                <Link className={styles.mobile_link} href={item.href}>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
         <ul className={styles.social}>
           {socialItems.map((item, index) => (
-            <li key={index}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <Icon name={item.icon} width={32} height={32} />
+            <li className={styles.social_item} key={index}>
+              <a
+                className={styles.social_link}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={item.icon} width={40} height={40} />
               </a>
             </li>
           ))}
         </ul>
-
-        <div className={styles.button_wrap}></div>
+        <button className={styles.button} type="button">
+          Бесплатное обучение арбитражу трафика
+        </button>
       </div>
     </div>
   );
