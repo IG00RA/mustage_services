@@ -1,0 +1,33 @@
+:root {
+  --font_mons: 'Montserrat', serif;
+  --font_gab: 'Gabarito', serif;
+
+  --background: #fbfbfb;
+  --foreground: linear-gradient(
+    95deg,
+    rgba(26, 117, 255, 0.15) 0%,
+    rgba(169, 203, 255, 0.15) 100%
+  );
+  --main_color: #1a75ff;
+  --main_text_color: #111a28;
+  --second_text_color: #f9f9f9;
+
+  --fs_small: 14px;
+  --fs_xsmall: 16px;
+  --fs_medium: 18px;
+  --fs_large: 24px;
+  --fs_xlarge: 32px;
+  --fs_mxlarge: 36px;
+  --fs_xxlarge: 40px;
+  --fs_xxxlarge: 45px;
+
+  --mobile: 328px;
+  --mobile_l: 360px;
+  --mobile_xl: 475px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1328px;
+
+  --container: 91.1%;
+  --container_mob: 85%;
+}

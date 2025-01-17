@@ -1,0 +1,139 @@
+.about {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 96px 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 200px 0 150px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: var(--desktop);
+  }
+}
+
+.imgWrap {
+  width: 100%;
+  aspect-ratio: 328/260;
+  background-image: url('../../img/about/line.svg'),
+    url('../../img/about/back.webp'), url('../../img/about/heart.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 17px right 42px, center center, center top;
+  background-size: 57px 40px, 80% auto, 100% 100%;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0px 2px 5px #ff94661a)
+      drop-shadow(0px 9px 20px #ffb0881f) drop-shadow(0px 16px 20px #ff94661a)
+      drop-shadow(0px 37px 15px #ff94661a) drop-shadow(0px 57px 16px #ffb0881f);
+    transform: scale(1.02);
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    max-width: 58.5%;
+    aspect-ratio: 328/250;
+    background-image: url('../../img/about/backDesk.webp');
+    background-position: center left -19px;
+    background-size: 106% auto;
+    margin-bottom: 0;
+    margin-top: -19px;
+  }
+}
+
+.text {
+  font-size: var(--fs_medium);
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_large);
+    line-height: 1.66;
+    margin-bottom: 25px;
+  }
+}
+
+.header {
+  font-size: var(--fs_xlarge);
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xxxlarge);
+    margin-bottom: 10px;
+  }
+}
+
+.wrapper {
+  @media (min-width: 1024px) {
+    padding-top: 42px;
+
+    & > button {
+      margin: 0;
+    }
+  }
+  @media (min-width: 1408px) {
+    padding-bottom: 65px;
+  }
+  @media (min-width: 1460px) {
+    padding-right: 95px;
+  }
+}
+
+.list {
+  margin-bottom: 40px;
+  & li {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 50px;
+    & li {
+      gap: 17px;
+    }
+  }
+}
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1f2f0;
+
+  @media (min-width: 1024px) {
+    width: 33px;
+    height: 33px;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.par {
+  letter-spacing: 0.03em;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_large);
+    line-height: 1.56;
+  }
+}
