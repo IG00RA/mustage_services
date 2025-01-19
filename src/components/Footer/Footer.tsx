@@ -1,54 +1,72 @@
-import Icon from '@/helpers/Icon';
 import styles from './Footer.module.css';
 import { footerItems } from '@/data/data';
+import Icon from '@/helpers/Icon';
+import Image from 'next/image';
+import mail from '../../img/footer/mail.webp';
 
 export default function Footer() {
   return (
-    <section id="footer" className={styles.footer}>
-      <div className={styles.container}>
-        <h3 className={styles.header}>'Footer.title</h3>
-
-        <ul className={styles.list}>
-          {footerItems.map((item, index) => (
-            <li key={index}>
-              <a
-                className={styles.item}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p>{item.text}</p>
-                <Icon name={item.icon} width={40} height={40} />
-              </a>
-            </li>
+    <ul className={styles.list}>
+      {footerItems.map((item, index) => (
+        <li key={index} className={styles.item}>
+          <Image
+            src={item.icon}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt={`${item.header} logo`}
+            className={styles.img}
+            priority
+          ></Image>
+          <h3 className={styles.item_header}>{item.header}</h3>
+          {item.text.split('\n').map((line, index) => (
+            <p className={styles.item_text} key={index}>
+              {line}
+            </p>
           ))}
+          <a
+            className={styles.item_link}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="icon-arrow-right" width={24} height={24} />
+          </a>
+        </li>
+      ))}
+      <li className={styles.item_mail}>
+        <Image
+          src={mail}
+          width={0}
+          height={0}
+          sizes="100vw"
+          alt={`Mail logo`}
+          className={styles.img_mail}
+          priority
+        ></Image>
+        <h3 className={styles.mail_header}>
+          Кнопка для комерческих предложений
+        </h3>
+        <ul>
+          <li>
+            <p className={styles.mail_text}>
+              Индивидуальные заливы на ваш оффер
+            </p>
+          </li>
+          <li>
+            <p className={styles.mail_text}>Реклама в паблике</p>
+          </li>
+          <li>
+            <p className={styles.mail_text}>
+              Опт расходников/ и индивидуальные условия для команд
+            </p>
+          </li>
         </ul>
-        <div className={styles.email_wrap}>
-          <a href="mailto:support@mustage.io">support@mustage.io</a>
-          <div className={styles.email_icon_wrap}>
-            <Icon name="icon-email" width={32} height={32} />
-          </div>
-        </div>
-      </div>
 
-      <div className={styles.marquee_wrap}>
-        <div className={styles.marquee}>
-          {[...Array(10)].map((_, index) => (
-            <div key={index} className={styles.text_wrap}>
-              <span className={styles.link}>mustage.team</span>
-              <span className={styles.link}>/</span>
-            </div>
-          ))}
-        </div>
-        <div aria-hidden="true" className={styles.marquee}>
-          {[...Array(10)].map((_, index) => (
-            <div key={index} className={styles.text_wrap}>
-              <span className={styles.link}>mustage.team</span>
-              <span className={styles.link}>/</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+        <a className={styles.item_link} href="mailto:support@mustage.io">
+          <Icon name="icon-arrow-right" width={24} height={24} />
+        </a>
+      </li>
+    </ul>
   );
 }

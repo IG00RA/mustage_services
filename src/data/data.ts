@@ -4,6 +4,11 @@ import reas3 from '../img/reasons/creo-mob.webp';
 import reas4 from '../img/reasons/academy-mob.webp';
 import reas5 from '../img/reasons/bot-mob.webp';
 
+import youTube from '../img/footer/youtube.webp';
+import tg from '../img/footer/tg.webp';
+import tik from '../img/footer/tik.webp';
+import insta from '../img/footer/insta.webp';
+
 export const socialItems = [
   { icon: 'icon-tg-soc', link: 'https://t.me/usaffiliate' },
   { icon: 'icon-youtube', link: 'https://www.youtube.com/@usaffiliate' },
@@ -88,53 +93,27 @@ export const reasonsItems = [
 
 export const footerItems = [
   {
-    text: 'Footer.profile',
-    icon: 'icon-profile',
-    link: 'https://mustage.site/',
-  },
-  {
-    text: 'Footer.proxy',
-    icon: 'icon-ua-proxy',
-    link: 'https://proxy.mustage.io/',
-  },
-  {
-    text: 'Footer.graduation',
-    icon: 'icon-graduation',
-    link: 'https://mustage.io/course',
-  },
-  {
-    text: 'Footer.creativity',
-    icon: 'icon-creativity-order',
-    link: 'https://mustage.io/creo',
-  },
-  {
-    text: 'Footer.portfolio',
-    icon: 'icon-portfolio',
-    link: 'https://t.me/mustage_portfolio',
-  },
-  {
-    text: 'Footer.youtube',
-    icon: 'icon-youtube-footer',
+    header: 'YouTube',
+    text: 'Авторский YouTube канал на 17,7 тыс. подписчиков.\nНа нем мы бесплатно обучаем тонкостям арбитража трафика, снимаем развлекательные шоу, и просто хорошо проводим время',
+    icon: youTube,
     link: 'https://www.youtube.com/@usaffiliate',
   },
   {
-    text: 'Footer.telegram',
-    icon: 'icon-telegram-footer',
-    link: 'https://t.me/mustage_channel',
+    header: 'TikTok',
+    text: 'Тут вас ожидают актуальные новости с мира digital и, конечно же, полезные ролики в сжатом формате, кучу мемов и нарезок!',
+    icon: tik,
+    link: 'https://www.tiktok.com/@mustage.io',
   },
   {
-    text: 'Footer.telegramChat',
-    icon: 'icon-telegram-footer',
-    link: 'https://t.me/+4oFlq242zzszZmQ6',
-  },
-  {
-    text: 'Footer.instagram',
-    icon: 'icon-instagram',
+    header: 'Instagram',
+    text: 'Да, инстаграм у нас тоже есть! И да информация там отличается от наших других медийных каналов, интересно что там? Заходи и посмотри лично.\n  P.S. Небольшая подсказка - Все в восторге от наших рилсов',
+    icon: insta,
     link: 'https://www.instagram.com/mustage.team/',
   },
   {
-    text: 'Footer.tikTok',
-    icon: 'icon-tik-tok',
-    link: 'https://www.tiktok.com/@mustage.io',
+    header: 'Telegram group',
+    text: 'Телеграм канал Усатого Арбитражника из Mustage Team. На нем вы найдете все то, что нельзя публиковать на ютубе 😉. Ежедневные и еженедельные розыгрыши аккаунтов для запуска рекламы. А так же свежие новости из мира арбитража, еженедельные дайджесты, возможность пообщаться в чате и попросить помощи в решение той или иной проблемы, залетайте - вам всегда будут рады!',
+    icon: tg,
+    link: 'https://t.me/mustage_channel',
   },
 ];
