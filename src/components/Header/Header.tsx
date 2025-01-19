@@ -31,15 +31,17 @@ export default function Header() {
         </Link>
 
         <nav className={styles.nav}>
-          <ul>
+          <ul className={styles.nav_list}>
             {menuItems.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href}>{item.label}</Link>
+              <li key={index} className={styles.nav_item}>
+                <Link className={styles.nav_link} href={item.href}>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
-        <button className={styles.button_wrap} type="button">
+        <button className={styles.button} type="button">
           Бесплатное обучение арбитражу трафика
         </button>
         <div

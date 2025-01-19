@@ -55,3 +55,75 @@
     }
   }
 }
+
+.item_mail {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #3aa0ff 0%, #1a75ff 100%),
+    linear-gradient(
+      95deg,
+      rgba(26, 117, 255, 0.15) 0%,
+      rgba(169, 203, 255, 0.15) 100%
+    );
+}
+
+.mail_header {
+  color: #fbfbfb;
+  font-size: var(--fs_large);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.mail_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-left: 22px;
+}
+
+.mail_list_item {
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.mail_list_item::marker {
+  font-size: 1.7em;
+  color: #fbfbfb;
+  line-height: 0;
+}
+
+.mail_text {
+  color: #fbfbfb;
+  font-size: var(--fs_xsmall);
+  font-weight: 500;
+}
+
+.mail_link {
+  display: flex;
+  width: 72px;
+  height: 56px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #fbfbfb;
+  margin-left: auto;
+
+  & svg {
+    fill: #fbfbfb;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      transform: scale(1.5);
+    }
+  }
+}

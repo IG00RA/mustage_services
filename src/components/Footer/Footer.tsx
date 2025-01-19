@@ -41,29 +41,28 @@ export default function Footer() {
           height={0}
           sizes="100vw"
           alt={`Mail logo`}
-          className={styles.img_mail}
+          className={styles.img}
           priority
         ></Image>
         <h3 className={styles.mail_header}>
           Кнопка для комерческих предложений
         </h3>
-        <ul>
-          <li>
+        <ul className={styles.mail_list}>
+          <li className={styles.mail_list_item}>
             <p className={styles.mail_text}>
               Индивидуальные заливы на ваш оффер
             </p>
           </li>
-          <li>
+          <li className={styles.mail_list_item}>
             <p className={styles.mail_text}>Реклама в паблике</p>
           </li>
-          <li>
+          <li className={styles.mail_list_item}>
             <p className={styles.mail_text}>
               Опт расходников/ и индивидуальные условия для команд
             </p>
           </li>
         </ul>
-
-        <a className={styles.item_link} href="mailto:support@mustage.io">
+        <a className={styles.mail_link} href="mailto:support@mustage.io">
           <Icon name="icon-arrow-right" width={24} height={24} />
         </a>
       </li>
