@@ -14,8 +14,7 @@ export default function About() {
           <h2 className={styles.header}>Кто мы такие?</h2>
         </div>
         <h3 className={styles.text_header}>
-          Mustage Team
-          <span className={styles.separator}>/ или /</span>
+          Mustage Team <span className={styles.separator}> / или /</span>
           команда Усатого Арбитражника
         </h3>
         <div className={styles.main_text_wrap}>
@@ -72,8 +71,11 @@ export default function About() {
         </div>
         <div className={styles.footer_box}>
           <p className={styles.footer_box_text}>
-            Мы создаем <span>новую экосистему</span> <br /> в мире арбитража
-            трафика
+            Мы создаем <span>новую экосистему </span>
+            <span className={styles.line_break}>
+              <br />
+            </span>
+            в мире арбитража трафика
           </p>
           <button className={styles.button} type="button">
             <span className={styles.button_text}>ЗАЛЕТАЙ К НАМ</span>

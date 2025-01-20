@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
 }
 
 .item {
@@ -10,12 +23,22 @@
   background: var(--foreground);
   display: flex;
   flex-direction: column;
+  @media (min-width: 1024px) {
+    padding: 32px 130px 32px 32px;
+    border-radius: 40px;
+    position: relative;
+  }
 }
 
 .img {
   width: 80px;
   height: 80px;
   margin-bottom: 24px;
+  @media (min-width: 1024px) {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+  }
 }
 
 .item_header {
@@ -24,11 +47,19 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1;
+  @media (min-width: 1024px) {
+    margin-bottom: 17px;
+  }
 }
 
 .item_text {
   margin-bottom: 16px;
   font-weight: 500;
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+    font-size: var(--fs_xsmall);
+    font-weight: 500;
+  }
 }
 
 .item_link {
@@ -54,6 +85,15 @@
       transform: scale(1.5);
     }
   }
+  @media (min-width: 1024px) {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    padding: 20px 32px;
+    width: 88px;
+    height: 64px;
+    border-radius: 24px;
+  }
 }
 
 .item_mail {
@@ -67,6 +107,12 @@
       rgba(26, 117, 255, 0.15) 0%,
       rgba(169, 203, 255, 0.15) 100%
     );
+
+  @media (min-width: 1024px) {
+    padding: 32px 130px 32px 32px;
+    border-radius: 40px;
+    position: relative;
+  }
 }
 
 .mail_header {
@@ -76,6 +122,9 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 16px;
+  @media (min-width: 1024px) {
+    margin-bottom: 17px;
+  }
 }
 
 .mail_list {
@@ -101,6 +150,11 @@
   color: #fbfbfb;
   font-size: var(--fs_xsmall);
   font-weight: 500;
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+    font-size: var(--fs_xsmall);
+    font-weight: 500;
+  }
 }
 
 .mail_link {
@@ -113,7 +167,6 @@
   border-radius: 16px;
   border: 1px solid #fbfbfb;
   margin-left: auto;
-
   & svg {
     fill: #fbfbfb;
     transform: scale(1);
@@ -125,5 +178,14 @@
     & svg {
       transform: scale(1.5);
     }
+  }
+  @media (min-width: 1024px) {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    padding: 20px 32px;
+    width: 88px;
+    height: 64px;
+    border-radius: 24px;
   }
 }

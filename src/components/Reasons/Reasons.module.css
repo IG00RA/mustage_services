@@ -3,7 +3,15 @@
   width: var(--container);
   padding-bottom: 96px;
 
+  @media (min-width: 768px) {
+    padding-bottom: 125px;
+  }
+
   @media (min-width: 1024px) {
+    padding-bottom: 160px;
+  }
+  @media (min-width: 1408px) {
+    max-width: var(--desktop);
   }
 }
 
@@ -12,12 +20,45 @@
   &:last-child {
     margin-bottom: 0;
   }
+  @media (min-width: 768px) {
+    margin-bottom: 125px;
+    display: flex;
+    gap: 16px;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 160px;
+    gap: 32px;
+  }
 }
 
 .image {
   width: 100%;
   height: auto;
   margin-bottom: 32px;
+  flex-shrink: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    width: 30%;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.image_desk {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    height: auto;
+    flex-shrink: 0;
+    width: 40%;
+    object-fit: cover;
+  }
 }
 
 .par {
@@ -30,16 +71,49 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 32px;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xxlarge);
+    line-height: 1;
+    margin-bottom: 40px;
+  }
 }
 
 .par_text {
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: var(--fs_xsmall);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_medium);
+    margin-bottom: 24px;
+  }
+}
+
+.par_text_second {
+  @media (min-width: 768px) {
+    font-size: var(--fs_xsmall);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_medium);
+  }
 }
 
 .button_wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  @media (min-width: 768px) {
+    gap: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 16px;
+  }
 }
 
 .button {
@@ -56,6 +130,11 @@
 
   & svg {
     fill: var(--second_text_color);
+  }
+
+  @media (min-width: 1024px) {
+    padding: 20px 24px 20px 32px;
+    gap: 16px;
   }
 }
 
@@ -97,6 +176,10 @@
   transition: transform 0.5s ease;
   & svg {
     fill: var(--main_color);
+  }
+
+  @media (min-width: 1024px) {
+    padding: 16px 32px;
   }
 }
 

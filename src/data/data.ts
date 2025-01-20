@@ -4,6 +4,12 @@ import reas3 from '../img/reasons/creo-mob.webp';
 import reas4 from '../img/reasons/academy-mob.webp';
 import reas5 from '../img/reasons/bot-mob.webp';
 
+import reasDesk1 from '../img/reasons/google.webp';
+import reasDesk2 from '../img/reasons/proxy.webp';
+import reasDesk3 from '../img/reasons/creo.webp';
+import reasDesk4 from '../img/reasons/academy.webp';
+import reasDesk5 from '../img/reasons/bot.webp';
+
 import youTube from '../img/footer/youtube.webp';
 import tg from '../img/footer/tg.webp';
 import tik from '../img/footer/tik.webp';
@@ -27,6 +33,7 @@ export const reasonsItems = [
   {
     head: 'Mustage Store - FB ADS/ GOOGLE ADS',
     img: reas1,
+    imgDesk: reasDesk1,
     text: {
       first:
         'У нас один из самых больших ассортиментов аккаунтов для запуска рекламы в FB и GOOGLE',
@@ -41,6 +48,7 @@ export const reasonsItems = [
   {
     head: 'Mustage Proxy',
     img: reas2,
+    imgDesk: reasDesk2,
     text: {
       first: 'Надежные украинские мобильные прокси',
       second:
@@ -53,6 +61,7 @@ export const reasonsItems = [
   {
     head: 'Mustage Creo',
     img: reas3,
+    imgDesk: reasDesk3,
     text: {
       first:
         'Конвертящие крео и лендинги любой сложности - От картинки до дипфейка',
@@ -67,6 +76,7 @@ export const reasonsItems = [
   {
     head: 'Mustage Academy',
     img: reas4,
+    imgDesk: reasDesk4,
     text: {
       first:
         'Бесплатное обучение по арбитражу трафика? Да еще и на практике, а не в теории!',
@@ -80,6 +90,7 @@ export const reasonsItems = [
   {
     head: 'Mustage Service bot',
     img: reas5,
+    imgDesk: reasDesk5,
     text: {
       first: 'Нужно уникал﻿изировать крео?',
       second:
