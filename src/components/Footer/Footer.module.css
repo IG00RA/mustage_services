@@ -11,10 +11,14 @@
 }
 
 .column {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 50%;
+  max-width: var(--tablet);
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
 }
 
 .item {

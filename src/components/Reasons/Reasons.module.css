@@ -17,32 +17,40 @@
 
 .item {
   margin-bottom: 96px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+
   @media (min-width: 768px) {
     margin-bottom: 125px;
-    display: flex;
-    gap: 16px;
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
   }
 
   @media (min-width: 1024px) {
     margin-bottom: 160px;
     gap: 32px;
+    display: flex;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    &:nth-child(1) {
+      .image_desk {
+        object-position: left bottom;
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 .image {
   width: 100%;
+  margin: 0 auto;
   height: auto;
   margin-bottom: 32px;
   flex-shrink: 0;
+  max-width: var(--mobile_xl);
   @media (min-width: 768px) {
-    margin-bottom: 0;
-    width: 30%;
+    max-width: none;
+    width: 50%;
+    margin-bottom: 40px;
   }
 
   @media (min-width: 1024px) {
@@ -58,6 +66,7 @@
     flex-shrink: 0;
     width: 40%;
     object-fit: cover;
+    border-radius: 40px;
   }
 }
 
