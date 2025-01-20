@@ -137,6 +137,7 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
+    cursor: pointer;
 
     &::before {
       content: '';

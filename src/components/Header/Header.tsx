@@ -41,9 +41,13 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <button className={styles.button} type="button">
+        <a
+          href="https://t.me/mustage_channel"
+          target="_blank"
+          className={styles.button}
+        >
           Бесплатное обучение арбитражу трафика
-        </button>
+        </a>
         <div
           className={`${styles.burger_wrap} ${
             isMenuOpen ? styles.burger_open : ''

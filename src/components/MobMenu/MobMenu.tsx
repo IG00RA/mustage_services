@@ -49,9 +49,13 @@ export default function MobMenu({ isMenuOpen, closeMenu }: MobMenuProps) {
             </li>
           ))}
         </ul>
-        <button className={styles.button} type="button">
+        <a
+          href="https://t.me/mustage_channel"
+          target="_blank"
+          className={styles.button}
+        >
           Бесплатное обучение арбитражу трафика
-        </button>
+        </a>
       </div>
     </div>
   );

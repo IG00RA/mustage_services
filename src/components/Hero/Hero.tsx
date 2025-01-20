@@ -17,14 +17,22 @@ export default function Hero() {
         </p>
         <div className={styles.back}></div>
         <div className={styles.button_wrap}>
-          <button className={styles.button} type="button">
+          <a
+            href="https://t.me/mustage_channel"
+            target="_blank"
+            className={styles.button}
+          >
             <span className={styles.button_text}>Telegram канал</span>
             <Icon name="icon-tg" width={24} height={24} />
-          </button>
-          <button className={styles.button_support} type="button">
+          </a>
+          <a
+            href="https://t.me/mustage_supportl"
+            target="_blank"
+            className={styles.button_support}
+          >
             <span className={styles.button_text_support}>Support</span>
             <Icon name="icon-arrow-right" width={20} height={20} />
-          </button>
+          </a>
         </div>
         <div className={styles.support_box}>
           <h3 className={styles.support_title}>Ищете помощь?</h3>
