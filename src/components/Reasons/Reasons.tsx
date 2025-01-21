@@ -1,13 +1,16 @@
+'use client';
+
 import styles from './Reasons.module.css';
 import Image from 'next/image';
 import { reasonsItems } from '@/data/data';
 import Icon from '@/helpers/Icon';
+import { sendToGoogleScript } from '@/api/sendData';
 export default function Reasons() {
   return (
     <section id="reasons" className={styles.reasons}>
       <ul className={styles.list}>
         {reasonsItems.map((item, index) => (
-          <li className={styles.item} key={index}>
+          <li id={item.id} className={styles.item} key={index}>
             <Image
               src={item.img}
               width={0}
@@ -33,12 +36,26 @@ export default function Reasons() {
                 <p className={styles.par_text_second}>{item.text.second}</p>
               </div>
               <div className={styles.button_wrap}>
-                <button className={styles.button} type="button">
+                <button
+                  type="button"
+                  onClick={e => {
+                    e.preventDefault();
+                    sendToGoogleScript(item.link.first);
+                  }}
+                  className={styles.button}
+                >
                   <span className={styles.button_text}>{item.btn.first}</span>
                   <Icon name="icon-arrow-right" width={24} height={24} />
                 </button>
                 {item.btn.second && (
-                  <button className={styles.button_support} type="button">
+                  <button
+                    type="button"
+                    onClick={e => {
+                      e.preventDefault();
+                      sendToGoogleScript(item.link.second || '');
+                    }}
+                    className={styles.button_support}
+                  >
                     <span className={styles.button_text_support}>
                       {item.btn.second}
                     </span>

@@ -2,6 +2,7 @@ import { menuItems, socialItems } from '@/data/data';
 import styles from './MobMenu.module.css';
 import Icon from '@/helpers/Icon';
 import Link from 'next/link';
+import { sendToGoogleScript } from '@/api/sendData';
 
 type MobMenuProps = {
   isMenuOpen: boolean;
@@ -49,13 +50,16 @@ export default function MobMenu({ isMenuOpen, closeMenu }: MobMenuProps) {
             </li>
           ))}
         </ul>
-        <a
-          href="https://t.me/mustage_channel"
-          target="_blank"
+        <button
+          type="button"
+          onClick={e => {
+            e.preventDefault();
+            sendToGoogleScript('https://t.me/mustage_channel');
+          }}
           className={styles.button}
         >
           Бесплатное обучение арбитражу трафика
-        </a>
+        </button>
       </div>
     </div>
   );

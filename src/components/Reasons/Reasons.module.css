@@ -136,6 +136,7 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
+  cursor: pointer;
 
   & svg {
     fill: var(--second_text_color);
@@ -183,6 +184,7 @@
   border: 1px solid var(--main_color);
   transform: scale(1);
   transition: transform 0.5s ease;
+ cursor: pointer;
   & svg {
     fill: var(--main_color);
   }

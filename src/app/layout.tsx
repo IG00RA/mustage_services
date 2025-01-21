@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Montserrat, Gabarito } from 'next/font/google';
 import { Suspense } from 'react';
 import { FacebookPixel } from '@/components/FacebookPixel/FacebookPixel';
-import { ToastContainer } from 'react-toastify';
 import Header from '@/components/Header/Header';
 
 const montserrat = Montserrat({
@@ -58,12 +57,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sk">
+    <html lang="ru">
       <body className={`${montserrat.variable} ${gabarito.variable}`}>
         <Header />
         <main>{children}</main>
-        <div id="portal-root"></div>
-        <ToastContainer />
         <Suspense fallback={null}>
           <FacebookPixel />
         </Suspense>

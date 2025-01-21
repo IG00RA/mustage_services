@@ -22,11 +22,11 @@ export const socialItems = [
 ];
 
 export const menuItems = [
-  { label: 'Аккаунты', href: '#reasons' },
-  { label: 'Крео', href: '#about' },
-  { label: 'Прокси', href: '#included' },
-  { label: 'Бот для уникализации', href: '#feedback' },
-  { label: 'Кто мы такие', href: '#feedback' },
+  { label: 'Аккаунты', href: '#acc' },
+  { label: 'Крео', href: '#creo' },
+  { label: 'Прокси', href: '#proxy' },
+  { label: 'Бот для уникализации', href: '#bot' },
+  { label: 'Кто мы такие', href: '#about' },
 ];
 
 export const reasonsItems = [
@@ -34,6 +34,7 @@ export const reasonsItems = [
     head: 'Mustage Store - FB ADS/ GOOGLE ADS',
     img: reas1,
     imgDesk: reasDesk1,
+    id: 'acc',
     text: {
       first:
         'У нас один из самых больших ассортиментов аккаунтов для запуска рекламы в FB и GOOGLE',
@@ -44,11 +45,16 @@ export const reasonsItems = [
       first: 'Перейти в магазин',
       second: 'Получить аккаунты бесплатно',
     },
+    link: {
+      first: 'https://mustage.site/',
+      second: 'https://t.me/mustage_giveaway_bot',
+    },
   },
   {
     head: 'Mustage Proxy',
     img: reas2,
     imgDesk: reasDesk2,
+    id: 'proxy',
     text: {
       first: 'Надежные украинские мобильные прокси',
       second:
@@ -57,11 +63,15 @@ export const reasonsItems = [
     btn: {
       first: 'Перейти на сайт',
     },
+    link: {
+      first: 'https://proxy.mustage.io/',
+    },
   },
   {
     head: 'Mustage Creo',
     img: reas3,
     imgDesk: reasDesk3,
+    id: 'creo',
     text: {
       first:
         'Конвертящие крео и лендинги любой сложности - От картинки до дипфейка',
@@ -72,11 +82,16 @@ export const reasonsItems = [
       first: 'Заказать',
       second: 'Портфолио',
     },
+    link: {
+      first: 'https://mustage.io/creo',
+      second: 'https://t.me/mustage_portfolio',
+    },
   },
   {
     head: 'Mustage Academy',
     img: reas4,
     imgDesk: reasDesk4,
+    id: '',
     text: {
       first:
         'Бесплатное обучение по арбитражу трафика? Да еще и на практике, а не в теории!',
@@ -86,18 +101,25 @@ export const reasonsItems = [
     btn: {
       first: 'Записаться на обучение',
     },
+    link: {
+      first: 'https://mustage.io/course',
+    },
   },
   {
     head: 'Mustage Service bot',
     img: reas5,
     imgDesk: reasDesk5,
+    id: 'bot',
     text: {
-      first: 'Нужно уникал﻿изировать крео?',
+      first: 'Нужно уникализировать крео?',
       second:
         'Для того, чтобы запускать много кабинетов - нужно много креативов, а чтобы креативы не банились их нужно уникализировать!',
     },
     btn: {
       first: 'Уникализировать креатив',
+    },
+    link: {
+      first: 'https://t.me/mustage_service_bot',
     },
   },
 ];

@@ -1,9 +1,12 @@
+'use client';
+
 import styles from './About.module.css';
 import Icon from '@/helpers/Icon';
 import clock from '../../img/about/clock.webp';
 import video from '../../img/about/video.webp';
 import Image from 'next/image';
 import Footer from '../Footer/Footer';
+import { sendToGoogleScript } from '@/api/sendData';
 
 export default function About() {
   return (
@@ -77,7 +80,14 @@ export default function About() {
             </span>
             в мире арбитража трафика
           </p>
-          <button className={styles.button} type="button">
+          <button
+            type="button"
+            onClick={e => {
+              e.preventDefault();
+              sendToGoogleScript('https://t.me/mustage_channel');
+            }}
+            className={styles.button}
+          >
             <span className={styles.button_text}>ЗАЛЕТАЙ К НАМ</span>
             <Icon name="icon-rocket" width={24} height={24} />
           </button>

@@ -148,14 +148,13 @@
     background-image: url('../../img/hero/back.webp');
     width: 60%;
     top: 160px;
-    right: -10%;
-    transform: translateX(0);
+    transform: translateX(98%);
   }
 
   @media (min-width: 1328px) {
     width: 970px;
     top: 96px;
-    right: -128px;
+    transform: translateX(94%);
   }
 }
 

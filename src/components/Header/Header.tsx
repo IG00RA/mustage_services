@@ -6,6 +6,7 @@ import Icon from '@/helpers/Icon';
 import MobMenu from '../MobMenu/MobMenu';
 import { useState } from 'react';
 import { menuItems } from '@/data/data';
+import { sendToGoogleScript } from '@/api/sendData';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,13 +42,16 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <a
-          href="https://t.me/mustage_channel"
-          target="_blank"
+        <button
+          type="button"
+          onClick={e => {
+            e.preventDefault();
+            sendToGoogleScript('https://t.me/mustage_channel');
+          }}
           className={styles.button}
         >
           Бесплатное обучение арбитражу трафика
-        </a>
+        </button>
         <div
           className={`${styles.burger_wrap} ${
             isMenuOpen ? styles.burger_open : ''

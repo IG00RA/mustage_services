@@ -1,3 +1,6 @@
+'use client';
+
+import { sendToGoogleScript } from '@/api/sendData';
 import styles from './Hero.module.css';
 import Icon from '@/helpers/Icon';
 export default function Hero() {
@@ -17,22 +20,28 @@ export default function Hero() {
         </p>
         <div className={styles.back}></div>
         <div className={styles.button_wrap}>
-          <a
-            href="https://t.me/mustage_channel"
-            target="_blank"
+          <button
+            type="button"
+            onClick={e => {
+              e.preventDefault();
+              sendToGoogleScript('https://t.me/mustage_channel');
+            }}
             className={styles.button}
           >
             <span className={styles.button_text}>Telegram канал</span>
             <Icon name="icon-tg" width={24} height={24} />
-          </a>
-          <a
-            href="https://t.me/mustage_supportl"
-            target="_blank"
+          </button>
+          <button
+            type="button"
+            onClick={e => {
+              e.preventDefault();
+              sendToGoogleScript('https://t.me/mustage_support');
+            }}
             className={styles.button_support}
           >
             <span className={styles.button_text_support}>Support</span>
             <Icon name="icon-arrow-right" width={20} height={20} />
-          </a>
+          </button>
         </div>
         <div className={styles.support_box}>
           <h3 className={styles.support_title}>Ищете помощь?</h3>

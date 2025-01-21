@@ -1,8 +1,11 @@
+'use client';
+
 import styles from './Footer.module.css';
 import { footerItems } from '@/data/data';
 import Icon from '@/helpers/Icon';
 import Image from 'next/image';
 import mail from '../../img/footer/mail.webp';
+import { sendToGoogleScript } from '@/api/sendData';
 
 export default function Footer() {
   return (
@@ -26,14 +29,16 @@ export default function Footer() {
                 {line}
               </p>
             ))}
-            <a
+            <button
+              type="button"
+              onClick={e => {
+                e.preventDefault();
+                sendToGoogleScript(item.link);
+              }}
               className={styles.item_link}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="icon-arrow-right" width={24} height={24} />
-            </a>
+            </button>
           </li>
         ))}
       </div>
@@ -56,14 +61,16 @@ export default function Footer() {
                 {line}
               </p>
             ))}
-            <a
+            <button
+              type="button"
+              onClick={e => {
+                e.preventDefault();
+                sendToGoogleScript(item.link);
+              }}
               className={styles.item_link}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="icon-arrow-right" width={24} height={24} />
-            </a>
+            </button>
           </li>
         ))}
         <li className={styles.item_mail}>
