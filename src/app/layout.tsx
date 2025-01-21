@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css';
-import 'react-toastify/dist/ReactToastify.css';
 import { Montserrat, Gabarito } from 'next/font/google';
 import { Suspense } from 'react';
 import { FacebookPixel } from '@/components/FacebookPixel/FacebookPixel';
